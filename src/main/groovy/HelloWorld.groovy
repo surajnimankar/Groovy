@@ -1,13 +1,12 @@
-import org.joda.time.*
-import org.joda.time.format.DateTimeFormat
-
+import org.joda.time.DateTime
 
 println("Hello Groovy World...!")
 println "today's date is: " + new Date()
 
+use(DateTimeCategory) {
+    def prinatabeDate = new DateTime(new Date())
+    println prinatabeDate.createPrintableDateTime(" Hello Date Time..!")
+}
 
-def prinatabeDate = new DateTime(new Date())
-def format = DateTimeFormat.forPattern('MM/dd/yyyy - hh:mm aa')
 
-println prinatabeDate.toString(format)
 
